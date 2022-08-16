@@ -1,40 +1,46 @@
+"use strict";
+cc._RF.push(module, 'a7dbfKh+5JK04r9bLRSoPa2', 'audio-manager');
+// scripts/controllers/audio-manager.js
+
+"use strict";
+
 ///deifnes an helper (singleton) class to play ausio assets
 var AudioManager = cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         //PUBLIC PROPERTIES
         //the properties below define all the audio clips that the class can play
         coinsWin: {
-            "default": null,
+            default: null,
             url: cc.AudioClip
         },
         coinsInsert: {
-            "default": null,
+            default: null,
             url: cc.AudioClip
         },
         jackpotWin: {
-            "default": null,
+            default: null,
             url: cc.AudioClip
         },
         lineWin: {
-            "default": null,
+            default: null,
             url: cc.AudioClip
         },
         reelStart: {
-            "default": null,
+            default: null,
             url: cc.AudioClip
         },
         reelRoll: {
-            "default": null,
+            default: null,
             url: cc.AudioClip
         },
         reelStop: {
-            "default": null,
+            default: null,
             url: cc.AudioClip
         },
         gameOver: {
-            "default": null,
+            default: null,
             url: cc.AudioClip
         }
     },
@@ -67,6 +73,7 @@ var AudioManager = cc.Class({
     playGameOver: function playGameOver() {
         cc.audioEngine.playEffect(this.gameOver, false);
     },
+
     playSound: function playSound(audioClip) {
         //audio play
         if (!audioClip) {
@@ -78,5 +85,6 @@ var AudioManager = cc.Class({
         //init the singleton instance
         AudioManager.instance = this;
     }
-
 });
+
+cc._RF.pop();

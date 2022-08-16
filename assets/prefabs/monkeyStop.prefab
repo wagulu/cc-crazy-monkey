@@ -3,14 +3,33 @@
     "__type__": "cc.Prefab",
     "_name": "",
     "_objFlags": 0,
+    "_native": "",
     "data": {
       "__id__": 1
-    }
+    },
+    "optimizationPolicy": 0,
+    "asyncLoadAssets": false
   },
   {
     "__type__": "cc.Node",
     "_name": "monkeyStop",
     "_objFlags": 0,
+    "_parent": null,
+    "_children": [],
+    "_tag": -1,
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 2
+      },
+      {
+        "__id__": 3
+      }
+    ],
+    "_prefab": {
+      "__id__": 4
+    },
+    "_id": "",
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
@@ -20,7 +39,6 @@
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
-    "_parent": null,
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -28,10 +46,9 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 244,
-      "height": 244
+      "width": 120,
+      "height": 117
     },
-    "_children": [],
     "_rotationX": 0,
     "_rotationY": 0,
     "_scaleX": 1,
@@ -45,22 +62,8 @@
     "_skewY": 0,
     "_localZOrder": 0,
     "_globalZOrder": 0,
-    "_tag": -1,
     "_opacityModifyRGB": false,
-    "_reorderChildDirty": false,
-    "_id": "",
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 2
-      },
-      {
-        "__id__": 3
-      }
-    ],
-    "_prefab": {
-      "__id__": 4
-    }
+    "groupIndex": 0
   },
   {
     "__type__": "cc.Sprite",
@@ -71,11 +74,10 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "1898669e-9ae3-4903-b54f-92bfe11bb03d"
+      "__uuid__": "b6a24327-3d5a-4c3d-99a7-f0e16a5194fa"
     },
     "_type": 0,
-    "_useOriginalSize": true,
-    "_sizeMode": 1,
+    "_sizeMode": 2,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -97,14 +99,19 @@
       "__id__": 1
     },
     "_enabled": true,
-    "tag": 9
+    "tag": 9,
+    "blinkTimer": null,
+    "blinkCounter": 0
   },
   {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
     },
-    "asset": null,
-    "fileId": "aca1c09oNhPm6PwPk0SX0mb"
+    "asset": {
+      "__uuid__": "54f186dc-6e97-4892-8084-bb60ac9394da"
+    },
+    "fileId": "aca1c09oNhPm6PwPk0SX0mb",
+    "sync": false
   }
 ]

@@ -1,3 +1,9 @@
+"use strict";
+cc._RF.push(module, '17a107hOA1DjJdGNDmkBd3y', 'game');
+// scripts/controllers/game.js
+
+'use strict';
+
 //defines the main driver of the game
 var Reel = require('reel'),
     OnOffButton = require('on-off-button'),
@@ -5,101 +11,101 @@ var Reel = require('reel'),
     UserDefault = require('user-default'),
     PayTableTags = require('paytable-tags')();
 cc.Class({
-    'extends': cc.Component,
+    extends: cc.Component,
     properties: {
         //PUBLIC PROPERTIES
         //gets/sets an array of Reel type (see reel.js asset) used to define the slot reels
         reels: {
-            'default': [],
+            default: [],
             type: [Reel]
         },
         //gets/sets the initial credit.
         currentCredit: {
-            'default': 100,
+            default: 100,
             type: cc.Integer
         },
         //gets/sets the amount of the "one bet" mode
         betOneValue: {
-            'default': 1,
+            default: 1,
             type: cc.Integer
         },
         //gets/sets the amount of the "max bet" mode
         betMaxValue: {
-            'default': 5,
+            default: 5,
             type: cc.Integer
         },
         //gets/sets the OnOff spin button
         spinButton: {
-            'default': null,
+            default: null,
             type: OnOffButton
         },
         //gets/sets the OnOff auto-spin button
         autoSpinButton: {
-            'default': null,
+            default: null,
             type: OnOffButton
         },
         //gets/sets the OnOff bet one button
         betOneButton: {
-            'default': null,
+            default: null,
             type: OnOffButton
         },
         //gets/sets the OnOff bet max button
         betMaxButton: {
-            'default': null,
+            default: null,
             type: OnOffButton
         },
         //gets/sets total bet label
         totalBetLabel: {
-            'default': null,
+            default: null,
             type: cc.Label
         },
         //gets/sets credit label
         creditLabel: {
-            'default': null,
+            default: null,
             type: cc.Label
         },
         //gets/sets info label
         betInfoLabel: {
-            'default': null,
+            default: null,
             type: cc.Label
         },
         //gets/sets how many reels have been completed the roll operation
         rollingCompletedCount: {
-            'default': 0,
+            default: 0,
             visible: false,
             type: cc.Integer
         },
         //gets/sets the flag that allows to undersatnd if all the reels have been completed its rolling operation
         isRollingCompleted: {
-            'default': true,
+            default: true,
             visible: false
         },
         //gets/sets the total bet value
         totalBetValue: {
-            'default': 0,
+            default: 0,
             visible: false,
             type: cc.Integer
         },
         //gets/sets the current bet value (bet one or bet max)
         currentBetValue: {
-            'default': 0,
+            default: 0,
             visible: false,
             type: cc.Integer
         },
         //gets/sets the current paytable tag (see paytable-tags.js asset)
         currentPayTableTag: {
-            'default': 0,
+            default: 0,
             visible: false,
             type: cc.Integer
         },
         //gets set the auto-spin flag
         isAutoSpin: {
-            'default': false,
+            default: false,
             visible: false
         },
         //gets/sets the timer instance used for the auto/spin  timeout
         autoSpinTimer: {
-            'default': null,
+            default: null,
             visible: false
         }
     },
@@ -296,3 +302,5 @@ cc.Class({
     }
 
 });
+
+cc._RF.pop();

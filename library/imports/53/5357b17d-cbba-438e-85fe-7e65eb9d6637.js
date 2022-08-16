@@ -1,43 +1,49 @@
+"use strict";
+cc._RF.push(module, '5357bF9y7pDjoX+fmXrnWY3', 'on-off-button');
+// scripts/ui/on-off-button.js
+
+"use strict";
+
 //defines a class to implement an On/Off button
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         //PUBLIC PROPERTIES
         ///gets/sets the event name that will be raised wneh the button is touched
         mouseDownName: {
-            "default": "on-off-mousedown"
+            default: "on-off-mousedown"
         },
         //gets/sets the sprite button
         sprite: {
-            "default": null,
+            default: null,
             type: cc.Sprite
         },
         //gets/sets the texture url for the on status
         spriteTextureDownUrl: {
-            "default": "",
+            default: "",
             url: cc.Texture2D
         },
         //gets/sets the on status
         isOn: {
-            "default": false
+            default: false
         },
         //PRIVATE PROPERTIES
         //gets/sets the texture for the off status
         spriteTextureUp: {
-            "default": "",
+            default: "",
             visible: false,
             url: cc.Texture2D
         },
         //gets/sets the cached texture for the off status
         spriteTextureDown: {
-            "default": "",
+            default: "",
             visible: false,
             url: cc.Texture2D
         },
         //gets/sets the locked status. If its value is true no actions will be performed on the touch event
         isLocked: {
-            "default": false,
+            default: false,
             visible: false
         }
     },
@@ -105,3 +111,5 @@ cc.Class({
     }
 
 });
+
+cc._RF.pop();

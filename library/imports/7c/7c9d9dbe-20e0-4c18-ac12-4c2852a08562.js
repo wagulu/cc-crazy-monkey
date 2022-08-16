@@ -1,17 +1,23 @@
+"use strict";
+cc._RF.push(module, '7c9d92+IOBMGKwSTChSoIVi', 'stop');
+// scripts/controllers/stop.js
+
+"use strict";
+
 cc.Class({
-    "extends": cc.Component,
+    extends: cc.Component,
 
     properties: {
         tag: {
-            "default": 0,
+            default: 0,
             type: cc.Integer
         },
         blinkTimer: {
-            "default": null,
+            default: null,
             visible: false
         },
         blinkCounter: {
-            "default": 0,
+            default: 0,
             visible: false
         }
     },
@@ -33,3 +39,5 @@ cc.Class({
     }
 
 });
+
+cc._RF.pop();

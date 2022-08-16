@@ -1,3 +1,9 @@
+"use strict";
+cc._RF.push(module, 'b1f8fcCyUlAQYXKla3YDX5/', 'stop-tags');
+// scripts/controllers/stop-tags.js
+
+"use strict";
+
 //defines the stop tags
 function StopTags() {
     return {
@@ -14,3 +20,5 @@ function StopTags() {
 }
 
 module.exports = StopTags;
+
+cc._RF.pop();

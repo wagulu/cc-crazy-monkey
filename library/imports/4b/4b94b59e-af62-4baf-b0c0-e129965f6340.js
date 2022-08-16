@@ -1,3 +1,9 @@
+"use strict";
+cc._RF.push(module, '4b94bWer2JLr7DA4SmWX2NA', 'paytable-definition');
+// scripts/controllers/paytable-definition.js
+
+'use strict';
+
 //defines the paytables
 
 /*
@@ -166,3 +172,5 @@ var PayTableDefinition = function PayTableDefinition(paytableTag) {
     }
 };
 module.exports = PayTableDefinition;
+
+cc._RF.pop();

@@ -1,10 +1,16 @@
+"use strict";
+cc._RF.push(module, 'ac85aN0yDZAy5qM8en8FeDQ', 'user-default');
+// scripts/controllers/user-default.js
+
+'use strict';
+
 var UserDefaultKeys = require('user-default-keys')();
 var UserDefault = cc.Class({
-    'extends': cc.Component,
+    extends: cc.Component,
 
     properties: {
         localStorage: {
-            'default': null,
+            default: null,
             visible: false,
             type: Object
         }
@@ -30,3 +36,5 @@ var UserDefault = cc.Class({
         this.localStorage.setItem(UserDefaultKeys.CURRENT_CREDIT, value);
     }
 });
+
+cc._RF.pop();

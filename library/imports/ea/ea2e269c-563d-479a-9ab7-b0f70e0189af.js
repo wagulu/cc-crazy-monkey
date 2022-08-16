@@ -1,3 +1,9 @@
+"use strict";
+cc._RF.push(module, 'ea2e2acVj1Hmpq3sPcOAYmv', 'paytable-tags');
+// scripts/controllers/paytable-tags.js
+
+"use strict";
+
 //defines the paytbal tags
 function PayTableTags() {
     return {
@@ -7,3 +13,5 @@ function PayTableTags() {
 }
 
 module.exports = PayTableTags;
+
+cc._RF.pop();

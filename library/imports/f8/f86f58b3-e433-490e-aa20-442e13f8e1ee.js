@@ -1,3 +1,9 @@
+"use strict";
+cc._RF.push(module, 'f86f5iz5DNJDqogRC4T+OHu', 'prng');
+// scripts/controllers/prng.js
+
+"use strict";
+
 //defines a pseudo random number generator
 function PRNG() {
     return {
@@ -10,3 +16,5 @@ function PRNG() {
 }
 
 module.exports = PRNG;
+
+cc._RF.pop();

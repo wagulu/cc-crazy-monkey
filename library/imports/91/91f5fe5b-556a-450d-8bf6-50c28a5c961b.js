@@ -1,13 +1,19 @@
+"use strict";
+cc._RF.push(module, '91f5f5bVWpFDYv2UMKKXJYb', 'paytable');
+// scripts/controllers/paytable.js
+
+'use strict';
+
 //defines the logicof the payline
 var PayTableDefinition = require('paytable-definition'),
     StopTags = require('stop-tags')();
 cc.Class({
-    'extends': cc.Component,
+    extends: cc.Component,
 
     properties: {},
     onLoad: function onLoad() {},
     isWinning: function isWinning(lineSymbolsTags, paytableTag) {
-        //loop throughout all the symbol tags
+        //loop throughout all the symbol tags 
         //checking for a sequence of identical symbol tags
         var lineCombinations = {};
         for (var i = 0; i < lineSymbolsTags.length; i++) {
@@ -79,3 +85,5 @@ cc.Class({
     }
 
 });
+
+cc._RF.pop();

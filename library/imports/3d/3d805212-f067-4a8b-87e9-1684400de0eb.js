@@ -1,90 +1,96 @@
+"use strict";
+cc._RF.push(module, '3d805IS8GdKi4fpFoRADeDr', 'reel');
+// scripts/controllers/reel.js
+
+'use strict';
+
 //defines a slot reel
 var PRNG = require('prng')();
 cc.Class({
-    'extends': cc.Component,
+    extends: cc.Component,
     properties: {
         //PUBLIC PROPERTIES
         //gets/sets an array of stops to define the reel
         stops: {
-            'default': [],
+            default: [],
             type: [cc.Prefab]
         },
         //gets/sets the min value used with the PRNG class
         prngMinRange: {
-            'default': 1,
+            default: 1,
             type: cc.Integer
         },
         //gets/sets the max value used with the PRNG class
         prngMaxRange: {
-            'default': 1000000000,
+            default: 1000000000,
             type: cc.Integer
         },
         //PRIVATE PROPERTIES
-        //gets/sets an array of cc.Node made instantiating each stop
+        //gets/sets an array of cc.Node made instantiating each stop 
         //defined in to the public stops array property
         stopNodes: {
-            'default': [],
+            default: [],
             visible: false,
             type: [cc.Node]
         },
-        //gets/sets the last node of the reel that
+        //gets/sets the last node of the reel that 
         //during the reel motion will be dinamically updated
         tailNode: {
-            'default': null,
+            default: null,
             visible: false,
             type: cc.Node
         },
         //gets/sets how many stops are visible on the reel container
         visibleStops: {
-            'default': 3,
+            default: 3,
             visible: false,
             type: cc.Integer
         },
         //gets/sets the adjacent vertical space between two stops
         padding: {
-            'default': 0,
+            default: 0,
             visible: false,
             type: cc.Integer
         },
         //gets/sets the height of each stop
         stopHeight: {
-            'default': 0,
+            default: 0,
             visible: false,
             type: cc.Integer
         },
         //gets/sets the amount of the Y translation that define the reel motion
         stepY: {
-            'default': 0,
+            default: 0,
             visible: false,
             type: cc.Integer
         },
         //gets/sets how many time the reel rolling happened
         rollingCount: {
-            'default': 0,
+            default: 0,
             visible: false,
             type: cc.Integer
         },
         //gets/sets the winner reel index calculated randomly
         winnerIndex: {
-            'default': 0,
+            default: 0,
             visible: false,
             type: cc.Integer
         },
         //gets/sets how many times the reel will roll befor stop on the winner symbols (calculated randomly)
         stopAfterRollingCount: {
-            'default': 0,
+            default: 0,
             visible: false,
             type: cc.Integer
         },
         //gets/sets the Y of the winner line
         winnerLineY: {
-            'default': 0,
+            default: 0,
             visible: false,
             type: cc.Integer
         },
         //gets/sets a flag that indicate if the rolling is completed
         isRollingCompleted: {
-            'default': false,
+            default: false,
             visible: false
         }
     },
@@ -162,24 +168,28 @@ cc.Class({
     },
     resetY: function resetY(currentStop) {
         //applies a correction to all the Y stops after that
-        // the reel has been stopped.
+        //the reel has been stopped.
         var deltaY = currentStop.y - this.winnerLineY + currentStop.height / 2;
+        var lastItemWon = this.winnerIndex === this.stopNodes.length - 1;
         for (var i = 0; i < this.stopNodes.length; i++) {
             var newStop = this.stopNodes[i];
             newStop.y = newStop.y - deltaY;
+            if (lastItemWon && newStop.y < this.winnerLineY && i != this.winnerIndex) {
+                newStop.y = newStop.y + this.padding;
+            }
         }
     },
     spin: function spin() {
         //start the reel spinning
 
-        /////////////////////////////////////
-        //TODO: it depends of the numeber of reel stops
+        ///////////////////////////////////// 
+        //TODO: it depends of the numeber of reel stops 
         var min = 1;
         var max = 2;
         /////////////////////////////////////
         this.rollingCount = 0;
         this.stopAfterRollingCount = Math.floor(Math.random() * (max - min + 1)) + min;
-        //PRNG
+        //PRNG 
         //gets random value with PRNG class between a min and max value
         var randomValue = PRNG.newValue(this.prngMinRange, this.prngMaxRange);
         //normalize with the number of stops
@@ -193,3 +203,5 @@ cc.Class({
         return this.stopNodes[this.winnerIndex];
     }
 });
+
+cc._RF.pop();

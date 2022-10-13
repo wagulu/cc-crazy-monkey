@@ -296,6 +296,9 @@ cc.Class({
             //TODO reset credit automatically
             this.updateCurrenCredit(100);
         }
+    },
+    backToHall:function(){
+        cc.director.loadScene("welcome")
     }
 
 });

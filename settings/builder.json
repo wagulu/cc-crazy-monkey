@@ -12,21 +12,21 @@
   "md5Cache": false,
   "mergeStartScene": false,
   "oauthLoginServer": "",
-  "optimizeHotUpdate": false,
+  "optimizeHotUpdate": true,
   "orientation": {
     "landscapeLeft": true,
     "landscapeRight": true,
     "portrait": false,
     "upsideDown": false
   },
-  "packageName": "org.cocos2d.cc-crazy-monkey",
+  "packageName": "org.cocos2d.cccrazymonkey",
   "privateKey": "",
   "qqplay": {
     "REMOTE_SERVER_ROOT": "",
     "orientation": "portrait"
   },
   "renderMode": "0",
-  "startScene": "1b7210cb-5452-45db-9244-834d93889d5c",
+  "startScene": "3c3d4223-77b7-4172-a47a-b4e4397291bd",
   "title": "cc-crazy-monkey",
   "webOrientation": "auto",
   "wechatgame": {
